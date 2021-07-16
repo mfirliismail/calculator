@@ -4,12 +4,6 @@ const operators = document.querySelectorAll('.operator')
 const equalSign = document.querySelector(".equal-sign")
 const clearBtn = document.querySelector('.all-clear')
 const decimal = document.querySelector('.decimal')
-const history = document.querySelector('.history')
-
-
-const tampilkanHistory = () =>{
-    history.value = `${currentNumber} ${calculationOperator} ${prevNumber} = `
-}
 
 
 decimal.addEventListener('click', (e) => {
@@ -26,7 +20,6 @@ clearBtn.addEventListener('click', () => {
 
 equalSign.addEventListener('click', () => {
     calculate()
-    tampilkanHistory()
     updateScreen(currentNumber)
 })
 
